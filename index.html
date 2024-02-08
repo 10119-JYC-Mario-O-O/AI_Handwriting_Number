@@ -1,0 +1,34 @@
+<html>
+    <head>
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"></script>
+
+        <link rel="stylesheet" href="style.css" />
+    </head>
+
+    <body>
+        <canvas id="Input" width="500" height="500"></canvas>
+        <canvas id="Prepro" width="500" height="500"></canvas>
+
+        <div id="trainOutput"></div>
+        <div id="aiOutput"></div>
+
+        <button id="erase">Erase</button>
+        <button id="aiSave">AI Save</button>
+        <button id="save">Save</button>
+        <button id="go">Go</button>
+
+        <div id="explain1">Write A Number (Integer) Between 0 And 9, And Press The "Go" Button. Press "Erase" Button To Erase All</div>
+        <div id="explain2">The "AI Save" And "Save" Buttons Are For Developer Only (Debugging And Stuff). So They Do Nothing Now</div>
+
+        <div id="forTrainData_Input"></div>
+        <div id="forTrainData_Output"></div>
+
+        <script src="AI/Preprocessing.js"></script>
+        <script src="Canvas.js"></script>
+        <!-- <script src="My Data/dataArray.js"></script> -->
+        <script src="My Data/data.js"></script>
+        <script src="AI/organizeOutput.js"></script>
+        <script src="AI/AI.js"></script>
+        <script src="AI/goAI.js"></script>
+    </body>
+</html>
