@@ -13,7 +13,7 @@ let Drawing, PreprocessedArray;
 function resetArray() {
     Drawing = new Array(100).fill().map(() => new Array(100).fill(0));
     PreprocessedArray = new Array(25).fill().map(() => new Array(25).fill(0));
-    document.getElementById("aiOutput").innerHTML = ""
+    document.getElementById("aiOutput").innerHTML = "";
 }
 
 function drawLine() {
@@ -84,6 +84,11 @@ function main() {
     PreproCTX.reset();
 
     if (DebugMod) {
+        document.getElementById("forTrainData_Output").style.fontSize = "25px";
+
+        document.getElementById("version").style.fontSize = "0px";
+        document.getElementById("producer").style.fontSize = "0px";
+
         PreproCanvas.style.border = "1px solid black";
 
         for (let y = 0; y < 25; y++) {
@@ -94,6 +99,11 @@ function main() {
             }
         }
     } else {
+        document.getElementById("forTrainData_Output").style.fontSize = "0px";
+
+        document.getElementById("version").style.fontSize = "20px";
+        document.getElementById("producer").style.fontSize = "20px";
+
         PreproCanvas.style.border = "1px solid white";
     }
 
