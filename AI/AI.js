@@ -1,12 +1,12 @@
 (async () => {
     const outputUnit = 10;
     
-    const model = await tf.loadLayersModel('My Model/My Model.json');
+    const model = await tf.loadLayersModel('My Model/My Model.json'); // Trained 50,000 Times
 
     // // const input_layer = tf.input({ shape: [25, 25] });
     // // const flatten_layer = tf.layers.flatten().apply(input_layer);
     // // const hidden_layer1 = tf.layers.dense({ units: 125, activation: 'relu' }).apply(flatten_layer);
-    // // const hidden_layer2 = tf.layers.dense({ units: 25, activation: 'relu' }).apply(hidden_layer1);
+    // // const hidden_layer2 = tf.layers.dense({ units: 125, activation: 'relu' }).apply(hidden_layer1);
     // // const output_layer = tf.layers.dense({ units: outputUnit, activation: 'softmax' }).apply(hidden_layer2);
   
     // // const model = tf.model({inputs: input_layer, outputs: output_layer});

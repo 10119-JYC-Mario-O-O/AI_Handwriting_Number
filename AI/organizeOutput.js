@@ -9,7 +9,7 @@ function organizeOutput(output, outputUnit) {
         let readyArray = [];
 
         for (let j = 0; j < outputUnit; j++) {
-            if (hiddenArray[i][j] >= 0.75) {
+            if (hiddenArray[i][j] >= 0.9) {
                 readyArray.push(j);
             }
         }

@@ -26,3 +26,5 @@ saveBTN.onclick = () => {
         forTrainData_Output.innerHTML = `${JSON.stringify(jsData.Output_Array)}`;
     }
 }
+
+// newInput_Array.splice(newInput_Array.length - 1, 1); newOutput_Array.splice(newOutput_Array.length - 1, 1); saveDataNumber--;

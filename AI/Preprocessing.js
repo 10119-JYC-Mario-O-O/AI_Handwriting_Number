@@ -67,11 +67,11 @@ function resize_One_X_One(Array_Data) {
             const newArray_Top = Math.floor((Array_Width - Array_Height) / 2);
 
             for (let y = 0; y < newArray_Top; y++) {
-                Array_Data.unshift(new Array(100).fill(0));
+                Array_Data.unshift(new Array(Array_Width).fill(0));
             }
 
             for (let y = newArray_Top + Array_Height; y < Array_Width; y++) {
-                Array_Data.push(new Array(100).fill(0));
+                Array_Data.push(new Array(Array_Width).fill(0));
             }
         } else {
             const newArray_Left = Math.floor((Array_Height - Array_Width) / 2);
@@ -144,13 +144,15 @@ function resize_Big_or_Small(Array_Data) {
         for (let x = 0; x < 25; x++) {
             let average = 0;
             
-            for (let i = 0; i < ratio; i++) {
-                average += Array_Data[y * ratio + i][x * ratio + i];
+            for (let dy = 0; dy < ratio; dy++) {
+                for (let dx = 0; dx < ratio; dx++) {
+                    average += Array_Data[y * ratio + dy][x * ratio + dx];
+                }
             }
 
             average /= ratio * ratio;
 
-            hiddenArray.push(average > 0 ? 1 : 0);
+            hiddenArray.push(Math.round(average));
         }
 
         resultArray.push(hiddenArray);
