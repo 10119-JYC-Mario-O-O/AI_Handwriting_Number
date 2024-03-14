@@ -1,7 +1,7 @@
 (async () => {
     const outputUnit = 10;
     
-    const model = await tf.loadLayersModel('My Model/My Model.json'); // Trained 75,000 Times
+    const model = await tf.loadLayersModel('My Model/My Model.json'); // Trained 100,000 Times
 
     // // const input_layer = tf.input({ shape: [25, 25] });
     // // const flatten_layer = tf.layers.flatten().apply(input_layer);
